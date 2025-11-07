@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Theme override test</title>
+<link
+href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swa
+p" rel="stylesheet">
+<link
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+rel="stylesheet">
+<style>
+:root{
+--bs-primary: #e76f51; /* coral */
+--bs-success: #2a9d8f; /* teal */
+--bs-font-sans-serif: 'Poppins', system-ui, -apple-system, "Segoe UI",
+Roboto, "Helvetica Neue", Arial;
+--bs-body-bg: #fffdf9;
+--bs-body-color: #2b2b2b;
+}
+body {
+font-family: var(--bs-font-sans-serif);
+background-color: var(--bs-body-bg);
+color: var(--bs-body-color);
+}
+.btn-primary {
+background-color: var(--bs-primary) !important;
+border-color: var(--bs-primary) !important;
+}
+</style>
+</head>
+<body class="p-4">
+<div class="container text-center">
+<h2 class="text-primary mb-4">Custom theme override (test)</h2>
+<p class="lead">Primary should be coral, success should be teal, font =
+Poppins.</p>
+<button class="btn btn-primary m-2">Primary Button</button>
+<button class="btn btn-success m-2">Success Button</button>
+<div class="alert alert-primary mt-4" role="alert">
+This is a themed alert (primary).
+</div>
+
+<div class="card mx-auto mt-4 shadow-sm" style="width: 18rem;">
+<div class="card-body">
+<h5 class="card-title text-primary">Themed Card</h5>
+<p class="card-text">Buttons, alert and headings should follow the
+custom color.</p>
+<a href="#" class="btn btn-primary">Learn More</a>
+</div>
+</div>
+</div>
+<script
+src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.
+js"></script>
+</body>
+</html>
